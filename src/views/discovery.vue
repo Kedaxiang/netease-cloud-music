@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div class="banner-wrap">
-      <Banner class="banner"/>
-    </div>
+    <tabbar/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Banner from 'components/content/Banner'
+import tabbar from 'components/common/tabbar'
 
 export default {
   data() {
@@ -16,7 +15,7 @@ export default {
     }
   },
   components: {
-    Banner
+    tabbar
   },
   methods: {
 
@@ -25,8 +24,5 @@ export default {
 </script>
 
 <style>
-  .banner {
-    margin: 0 auto;
-    width: 1000px;
-  }
+
 </style>

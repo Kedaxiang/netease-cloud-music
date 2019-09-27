@@ -145,6 +145,7 @@ export default {
     text-align: center;
     position: relative;
     padding: 10px 0;
+    margin: auto;
     -moz-perspective: 900px;
     perspective: 900px;
     .banner-content {

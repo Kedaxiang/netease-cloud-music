@@ -2,9 +2,9 @@
   <div class="layout">
     <Header/>
     <div class="layout-body">
-      <Aside/>
+      <Aside class="aside"/>
       <div class="content">
-        <router-view></router-view>
+        <router-view/>
       </div>
     </div>
   </div>
@@ -28,11 +28,13 @@ export default {
     .layout-body {
       display: flex;
       height: calc(100% - 60px);
-      .menu {
-        box-sizing: border-box;
+      .aside {
+        flex: 1;
+        max-width: 200px
       }
       .content {
-        flex: 1
+        flex: 1;
+        overflow-y: auto;
       }
     }
   }

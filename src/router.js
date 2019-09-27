@@ -15,7 +15,33 @@ export default new Router({
     {
       path: '/discovery',
       name: 'discovery',
-      component: () => import ('views/discovery')
+      component: () => import ('views/discovery'),
+      children: [
+        {
+          path: 'recommend',
+          component: () => import ('views/discoveryMenu/recommend')
+        },
+        {
+          path: 'songList',
+          component: () => import ('views/discoveryMenu/songList')
+        },
+        {
+          path: 'DJstation',
+          component: () => import ('views/discoveryMenu/station')
+        },
+        {
+          path: 'rank',
+          component: () => import ('views/discoveryMenu/rank')
+        },
+        {
+          path: 'singers',
+          component: () => import ('views/discoveryMenu/singers')
+        },
+        {
+          path: 'newMusic',
+          component: () => import ('views/discoveryMenu/newMusic')
+        }
+      ]
     },
     {
       path: '/FM',
