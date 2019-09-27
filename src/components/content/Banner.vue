@@ -8,7 +8,7 @@
              :key="index"
              :class="setClass(index)"
              @click="onClick(index)"
-             :style="setImg(item.src)"
+             :style="setImg(item.imageUrl)"
              @mouseover="pause()"
              @mouseout="play()">
         </div>
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -43,13 +45,7 @@ export default {
       showDots: true,
       isShowArrow: false,
       list: [
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614389.png'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614391.png'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614395.png'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614397.png'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614400.png'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614401.jpg'},
-        {src: 'http://imgs.xueui.cn/wp-content/uploads/2017/01/201701051483614402.png'}
+
       ],
       bannerList: [],
       currentIndex: 0,
@@ -130,6 +126,15 @@ export default {
   mounted() {
     this.play()
     this.bannerList = this.$refs.banner.querySelectorAll('div.banner');
+    axios.defaults.baseURL = 'http://localhost:3000'
+    axios({
+      url: '/banner?type=0'
+    }).then(res => {
+      console.log(res.data)
+      this.list = res.data.banners
+    }).catch(err => {
+      console.log(err)
+    })
   }
 }
 </script>
