@@ -152,7 +152,7 @@ export default {
   }
   .choose-bar {
     height: 40px;
-    widows: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     font-size: 12px;

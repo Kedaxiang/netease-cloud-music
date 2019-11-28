@@ -52,7 +52,6 @@ export default {
 <style lang="less" scoped>
   .tab-bar {
     height: 56px;
-    width: calc(100% - 60px);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -60,8 +59,8 @@ export default {
     padding: 0 320px;
     border-bottom: 1px solid #e1e1e2;
     .tab-bar-item {
-      height: 100%;
       width: 70px;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -71,7 +70,7 @@ export default {
       cursor: pointer;
       .redLine {
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         width: 100%;
         height: 2px;
         background-color: #c62f2f;

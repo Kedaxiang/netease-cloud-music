@@ -145,7 +145,6 @@ export default {
     padding: 0;
   }
   .banner-container {
-    width: 900px;
     height: 260px;
     text-align: center;
     position: relative;
@@ -171,9 +170,9 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         background-size: inherit;
-        transform: translate3d(-50%, 0, -80px);
-        -moz-transform: translate3d(-50%, 0, -80px);
-        -webkit-transform: translate3d(-50%, 0, -80px);
+        transform: translate3d(-70%, 0, -100px);
+        -moz-transform: translate3d(-70%, 0, -100px);
+        -webkit-transform: translate3d(-70%, 0, -100px);
         z-index: 1;
         &:before {
           position: absolute;
@@ -195,15 +194,15 @@ export default {
         z-index: 20;
       }
       .pre {
-        transform: translate3d(-75%, 0, -100px);
-        -moz-transform: translate3d(-75%, 0, -100px);
-        -webkit-transform: translate3d(-75%, 0, -100px);
+        transform: translate3d(-85%, 0, -100px);
+        -moz-transform: translate3d(-85%, 0, -100px);
+        -webkit-transform: translate3d(-85%, 0, -100px);
         z-index: 19;
       }
       .next {
-        transform: translate3d(-25%, 0, -100px);
-        -moz-transform: translate3d(-25%, 0, -100px);
-        -webkit-transform: translate3d(-25%, 0, -100px);
+        transform: translate3d(-15%, 0, -100px);
+        -moz-transform: translate3d(-15%, 0, -100px);
+        -webkit-transform: translate3d(-15%, 0, -100px);
         z-index: 18
       }
       .el-icon-arrow-left {

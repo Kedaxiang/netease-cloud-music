@@ -10,7 +10,7 @@ export default new Router({
     //一级路由
     {
       path: '/',
-      redirect: 'discovery'
+      redirect: 'discovery',
     },
     {
       path: '/discovery',
@@ -19,7 +19,7 @@ export default new Router({
       children: [
         {
           path: 'recommend',
-          component: () => import ('views/discoveryMenu/recommend')
+          component: () => import ('views/discoveryMenu/recommend/index')
         },
         {
           path: 'songList',
